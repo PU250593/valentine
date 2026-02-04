@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Will you be my Valentine? ❤️</h1>
+
+        <div class="buttons">
+            <button class="yes-btn" onclick="goYes()">Yes 💖</button>
+            <button class="no-btn" onclick="moveNo()">No 😢</button>
+        </div>
+    </div>
+
+    <script>
+        function goYes() {
+            window.location.href = "yes.html";
+        }
+
+        function moveNo() {
+            const noBtn = document.querySelector('.no-btn');
+            const x = Math.random() * 300 - 150;
+            const y = Math.random() * 300 - 150;
+            noBtn.style.transform = `translate(${x}px, ${y}px)`;
+        }
+    </script>
+
+</body>
+
+</html>
